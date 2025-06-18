@@ -41,7 +41,6 @@ export default function Admin() {
 
     try {
       if (editId) {
-        // Uppdatera inlägg
         const postRef = doc(db, "posts", editId);
         await updateDoc(postRef, {
           title,
@@ -49,7 +48,6 @@ export default function Admin() {
         });
         setEditId(null);
       } else {
-        // Lägg till nytt inlägg
         await addDoc(collection(db, "posts"), {
           title,
           content,

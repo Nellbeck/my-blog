@@ -24,7 +24,9 @@ const PostDetail = () => {
   return (
     <div style={{ padding: "4rem" }}>
       <h1>{post.title}</h1>
-      <p>{post.content}</p>
+      {post.content.split("\n\n").map((paragraph: string, index: number) => (
+        <p key={index}>{paragraph}</p>
+     ))}
       <small>{new Date(post.createdAt.seconds * 1000).toLocaleString()}</small>
     </div>
   );
