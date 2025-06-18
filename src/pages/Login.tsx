@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "./firebase";
+import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
 
 export default function Login() {
@@ -22,7 +22,7 @@ export default function Login() {
   };
 
   return (
-    <div style={{ padding: "2rem" }}>
+    <div style={{ padding: "4rem" }}>
       <h2>Logga in</h2>
       <form onSubmit={handleLogin}>
         <input

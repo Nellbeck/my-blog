@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./Login";
-import Admin from "./Admin";
-import RequireAuth from "./RequireAuth";
-import Home from "./Home";
+import Login from "./pages/Login";
+import Admin from "./pages/Admin";
+import RequireAuth from "./pages/RequireAuth";
+import Home from "./pages/Home";
 import SidebarMenu from "./components/SidebarMenu";
-import Contact from "./Contact";
+import Contact from "./pages/Contact";
+import PostDetail from "./pages/PostDetail";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/post/:id" element={<PostDetail />} />
         <Route
           path="/admin"
           element={

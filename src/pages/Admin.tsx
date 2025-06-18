@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { db, auth } from "./firebase";
+import { db, auth } from "../firebase";
 import {
   collection,
   addDoc,
@@ -86,7 +86,7 @@ export default function Admin() {
   };
 
   return (
-    <div style={{ padding: "2rem" }}>
+    <div style={{ padding: "4rem" }}>
       <h2>Adminpanel</h2>
       <button onClick={handleLogout}>Logga ut</button>
 

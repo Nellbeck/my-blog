@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <div style={{ padding: "2rem" }}>
+    <div style={{ padding: "4rem" }}>
     <h1>Kontakt</h1>
     <section>
     <h2>Linkedin:</h2>
