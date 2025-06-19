@@ -52,9 +52,14 @@ export default function Home() {
           >
             <h2>{post.title}</h2>
             <p>
-              {post.content.length > 200
+              {(post.content.length > 200
                 ? post.content.slice(0, 200) + "..."
-                : post.content}
+                : post.content
+              )
+                .split("\n\n")
+                .map((paragraph: string, index: number) => (
+                  <p key={index}>{paragraph}</p>
+              ))}
             </p>
             <small>
               {new Date(post.createdAt.seconds * 1000).toLocaleString()}

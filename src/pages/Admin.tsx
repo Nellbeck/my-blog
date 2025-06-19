@@ -108,6 +108,16 @@ export default function Admin() {
       <button onClick={handlePublish}>
         {editId ? "Uppdatera inlägg" : "Publicera inlägg"}
       </button>
+      <br />
+      <h3>Förhandsvisning</h3>
+      <div style={{ border: "1px solid #ccc", padding: "1rem", marginBottom: "2rem" }}>
+        <h2>{title || "(Ingen titel än)"}</h2>
+        {content
+          ? content.split("\n\n").map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))
+          : <p>(Inget innehåll ännu)</p>}
+      </div>
 
       <hr />
 
